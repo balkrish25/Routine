@@ -4,20 +4,20 @@
 /* ---------- CONFIG: tasks & filenames (change names to match your real assets) ---------- */
 /* Tasks 1..15 in order, filenames are placeholders you will replace later. */
 const TASKS = [
-  { id: 1, label: '1. Get up', img: 'img1_get_up.jpg' },
-  { id: 2, label: '2. Brush the teeth', img: 'img2_brush_teeth.jpg' },
-  { id: 3, label: '3. Take bath', img: 'img3_take_bath.jpg' },
-  { id: 4, label: '4. Have breakfast', img: 'img4_breakfast.jpg' },
-  { id: 5, label: '5. Go to school', img: 'img5_go_to_school.jpg' },
-  { id: 6, label: '6. Be in class', img: 'img6_be_in_class.jpg' },
-  { id: 7, label: '7. Have lunch', img: 'img7_have_lunch.jpg' },
-  { id: 8, label: '8. Back to home', img: 'img8_back_to_home.jpg' },
-  { id: 9, label: '9. Wash hands', img: 'img9_wash_hands.jpg' },
-  { id: 10, label: '10. Play with friends', img: 'img10_play_with_friends.jpg' },
-  { id: 11, label: '11. Do your homework', img: 'img11_do_homework.jpg' },
-  { id: 12, label: '12. Have dinner', img: 'img12_have_dinner.jpg' },
-  { id: 13, label: '13. Read stories', img: 'img13_read_stories.jpg' },
-  { id: 14, label: '14. Go to bed', img: 'img14_go_to_bed.jpg' }
+  { id: 1, label: '1. Get up', img: './Assets/images/img1_get_up.jpg' },
+  { id: 2, label: '2. Brush the teeth', img: './Assets/images/img2_brush_teeth.jpg' },
+  { id: 3, label: '3. Take bath', img: './Assets/images/img3_take_bath.jpg' },
+  { id: 4, label: '4. Have breakfast', img: './Assets/images/img4_breakfast.jpg' },
+  { id: 5, label: '5. Go to school', img: './Assets/images/img5_go_to_school.jpg' },
+  { id: 6, label: '6. Be in class', img: './Assets/images/img6_be_in_class.jpg' },
+  { id: 7, label: '7. Have lunch', img: './Assets/images/img7_have_lunch.jpg' },
+  { id: 8, label: '8. Back to home', img: './Assets/images/img8_back_to_home.jpg' },
+  { id: 9, label: '9. Wash hands', img: './Assets/images/img9_wash_hands.jpg' },
+  { id: 10, label: '10. Play with friends', img: './Assets/images/img10_play_with_friends.jpg' },
+  { id: 11, label: '11. Do your homework', img: './Assets/images/img11_do_homework.jpg' },
+  { id: 12, label: '12. Have dinner', img: './Assets/images/img12_have_dinner.jpg' },
+  { id: 13, label: '13. Read stories', img: './Assets/images/img13_read_stories.jpg' },
+  { id: 14, label: '14. Go to bed', img: './Assets/images/img14_go_to_bed.jpg' }
 ];
 
 /* ---------- DOM elements ---------- */
@@ -70,7 +70,7 @@ function createDraggable(task) {
   d.dataset.img = task.img;
 
   const img = document.createElement('img');
-  img.src = 'assets/images/' + task.img;
+  img.src = task.img;
   img.alt = task.label;
   d.appendChild(img);
 

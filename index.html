@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Match your daily routine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- SCREEN: Start -->
+    <section id="screen-start" class="screen active">
+      <div class="start-center">
+        <div class="start-title">Match your daily routine</div>
+        <button class="start-btn" id="btn-start">Start</button>
+      </div>
+      <div class="footer-left">Prototype Content - Primary Level</div>
+      <img class="logo-right" src="assets/images/logo.png" alt="logo">
+      <div class="copyright-right">© CDAC, Banglore</div>
+    </section>
+
+    <!-- SCREEN: Part A (Tasks 1-8) -->
+    <section id="screen-part1" class="screen">
+      <img class="home" src="assets/images/home.png" alt="home" id="home1">
+      <div class="game-title">Drag the right images of your daily routine</div>
+
+      <div class="grid-targets" id="targets-part1"></div>
+
+      <div class="bottom-bar" id="bottom-bar-part1"></div>
+    </section>
+
+    <!-- SCREEN: Part B (Tasks 9-15) -->
+    <section id="screen-part2" class="screen">
+      <img class="home" src="assets/images/home.png" alt="home" id="home2">
+      <div class="game-title">Drag the right images of your daily routine</div>
+
+      <div class="grid-targets" id="targets-part2"></div>
+
+      <div class="bottom-bar" id="bottom-bar-part2"></div>
+    </section>
+
+    <!-- SCREEN: Success -->
+    <section id="screen-success" class="screen">
+      <div class="success-title">You are good!</div>
+      <img class="success-img" src="assets/images/celebrate.png" alt="celebrate">
+      <button class="playagain" id="btn-playagain">Play Again</button>
+      <div class="footer-left">Prototype Content - Primary Level</div>
+    </section>
+
+  </div>
+
+  <!-- Audio -->
+  <audio id="audio-correct" src="assets/sounds/correct.mp3" preload="auto"></audio>
+  <audio id="audio-wrong" src="assets/sounds/wrong.mp3" preload="auto"></audio>
+  <audio id="audio-congrats" src="assets/sounds/cheer.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

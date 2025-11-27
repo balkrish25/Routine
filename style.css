@@ -1,0 +1,92 @@
+/* style.css - shared look/feel (keeps layout similar to your screenshots) */
+
+:root {
+  --border: #07607a;
+  --accent: #0787d4;
+  --lightbox: #e8fbfa;
+  --slot-bg: #eaffff;
+}
+
+* { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
+html,body { height:100vh; width:100vw; margin:0; padding:0; background:#fff; overflow:hidden; }
+.container {
+  width:100vw; height:100vh; margin:0; border:8px solid var(--border);
+  padding:18px; position:relative; background:#fff; box-sizing:border-box;
+}
+
+/* generic screens */
+.screen { display:none; height:100%; position:relative; }
+.screen.active { display:block; }
+
+/* Start screen */
+.start-center {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  height:100%;
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+}
+.start-title { font-size:30px; color:var(--accent); font-weight:700; margin-bottom:18px; }
+.start-btn {
+  border:4px solid #bdebdc; padding:10px 26px; border-radius:22px; background:#ddf9f0; color:#07607a;
+  font-size:20px; cursor:pointer; box-shadow: inset 0 0 0 4px rgba(255,255,255,0.22);
+}
+
+/* small logo bottom-right */
+.logo-right { position:absolute; right:20px; bottom:8px; height:100px; opacity:0.95; }
+
+/* copyright below logo */
+.copyright-right { position:absolute; right:20px; bottom:-12px; color:#0b6a89; font-size:12px; }
+
+/* game title */
+.game-title { text-align:center; color:var(--accent); font-size:22px; margin-bottom:12px; font-weight:700; }
+
+/* grid for targets */
+.grid-targets {
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:22px;
+  padding:6px 10px 120px 10px; /* bottom padding to leave space for bottom bar */
+}
+
+/* each slot */
+.slot {
+  min-height:150px; border:3px solid #bfc0be; background:var(--slot-bg);
+  box-shadow: 0 6px 0 rgba(0,0,0,0.08); position:relative; display:flex; align-items:center; justify-content:center;
+  overflow:hidden;
+}
+.slot p { position:absolute; left:8px; top:6px; margin:0; font-weight:700; font-size:14px; }
+
+/* bottom bar */
+.bottom-bar {
+  position: absolute; left:24px; right:24px; bottom:18px; border-top:4px solid #f4b7b7;
+  padding:12px 18px; display:flex; gap:16px; justify-content:center; align-items:center; background:transparent;
+}
+
+/* draggable tiles */
+.draggable {
+  width:100px; height:100px; border:3px solid #f0d37b; border-radius:4px; padding:6px; background:#fff;
+  display:flex; align-items:center; justify-content:center; cursor:grab;
+}
+.draggable img { max-width:100%; max-height:100%; display:block; }
+
+/* home icon top-right */
+.home { position:absolute; right:18px; top:2px; width:40px; height:40px; cursor:pointer; }
+
+/* success page */
+.success-title { font-size:36px; color:#ff7a00; font-weight:700; text-align:center; margin-top:40px; }
+.success-img { display:block; margin:22px auto; max-height:420px; }
+.playagain { position:absolute; right:60px; bottom:40px; padding:10px 16px; border-radius:6px; border:3px solid #d4b3f0; background:#f8eaff; cursor:pointer; }
+
+/* footer left */
+.footer-left { position:absolute; left:18px; bottom:10px; color:#0b6a89; font-weight:700; font-size:14px; }
+
+/* responsive tweaks */
+@media (max-width:900px){
+  .grid-targets { grid-template-columns: repeat(2, 1fr); padding-bottom:160px; }
+  .draggable { width:80px; height:80px; }
+}
